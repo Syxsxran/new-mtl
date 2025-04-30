@@ -8,7 +8,6 @@ const PORT = 3000;
 const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri);
 
-
 function digitToThaiWithSeparator(input) {
   const thaiDigits = ['ศูนย์','หนึ่ง','สอง','สาม','สี่','ห้า','หก','เจ็ด','แปด','เก้า'];
   return input.toString().split('').map(ch => thaiDigits[parseInt(ch)]).join(' | ');
